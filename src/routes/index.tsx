@@ -91,7 +91,7 @@ function Index() {
             <img src={team} alt="Construction team" loading="lazy" width={1280} height={960} className="rounded-sm shadow-[var(--shadow-soft)] aspect-[4/3] object-cover" />
           </div>
           <div>
-            <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-3">Subh & Labh</p>
+            <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-3">Rite Tech</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-5">Transforming Space, Building Futures</h2>
             <p className="text-muted-foreground text-lg mb-8">
               We deliver innovative construction solutions with quality craftsmanship and sustainable design — projects built to last.
@@ -150,7 +150,7 @@ function Index() {
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="relative container mx-auto px-6 max-w-3xl">
           <Leaf className="size-12 text-primary mb-6" />
-          <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-3">Subh & Labh</p>
+          <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-3">Rite Tech</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-5">Environmentally Responsible Building Practices</h2>
           <p className="opacity-80 text-lg mb-8">
             Our commitment to sustainable design integrates eco-friendly materials, energy efficiency, and innovative green technologies into every project.
