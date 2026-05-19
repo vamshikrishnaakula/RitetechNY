@@ -9,7 +9,7 @@ import floor from "@/assets/project-floor.jpg";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Subh & Labh General Contracting" },
+      { title: "Services — Rite Tech Construction" },
       { name: "description", content: "Architecture, design & engineering, construction management, and full renovation services for residential projects." },
       { property: "og:title", content: "Our Services" },
       { property: "og:description", content: "Comprehensive construction and design services." },

@@ -10,7 +10,7 @@ export function CtaBanner() {
           <p className="text-primary font-semibold tracking-widest text-xs uppercase mb-3">Let's build together</p>
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready to bring your vision to life?</h2>
           <p className="max-w-2xl mx-auto opacity-80 mb-8">
-            Start your journey with Subh & Labh and transform your space with expert design and construction services.
+            Start your journey with Rite Tech and transform your space with expert design and construction services.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-[image:var(--gradient-accent)] text-primary-foreground font-medium rounded-sm hover:opacity-90 transition">

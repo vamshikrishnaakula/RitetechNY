@@ -11,10 +11,10 @@ import smart from "@/assets/project-smart.jpg";
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Our Works — Subh & Labh General Contracting" },
+      { title: "Our Works — Rite Tech Construction" },
       { name: "description", content: "A showcase of our most innovative architectural and construction achievements." },
       { property: "og:title", content: "Our Works" },
-      { property: "og:description", content: "Project showcase by Subh & Labh General Contracting." },
+      { property: "og:description", content: "Project showcase by Rite Tech Construction." },
     ],
   }),
   component: ProjectsPage,

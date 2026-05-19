@@ -7,9 +7,9 @@ import { Award, Users, Leaf, ShieldCheck } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Subh & Labh General Contracting" },
+      { title: "About — Rite Tech Construction" },
       { name: "description", content: "Decades of trusted construction experience. Skilled craftsmen, sustainable design, and a clean process from start to finish." },
-      { property: "og:title", content: "About Subh & Labh" },
+      { property: "og:title", content: "About Rite Tech" },
       { property: "og:description", content: "Trusted general contractors building futures." },
     ],
   }),
@@ -24,7 +24,7 @@ function AboutPage() {
           <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-4">About Us</p>
           <h1 className="text-5xl md:text-6xl font-bold mb-6">Building your project. Earning your trust.</h1>
           <p className="text-lg opacity-80 max-w-2xl">
-            For over a decade, Subh & Labh has delivered residential remodeling and construction with a focus on craftsmanship, transparency, and lasting value.
+            For over a decade, Rite Tech has delivered residential remodeling and construction with a focus on craftsmanship, transparency, and lasting value.
           </p>
         </div>
       </section>

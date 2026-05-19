@@ -72,9 +72,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Subh & Labh General Contracting — Home Remodeling & Construction" },
+      { title: "Rite Tech Construction — Home Remodeling & Construction" },
       { name: "description", content: "Licensed, bonded, and insured general contractor. Kitchens, bathrooms, full home renovations, and structural work — built to last." },
-      { property: "og:title", content: "Subh & Labh General Contracting" },
+      { property: "og:title", content: "Rite Tech Construction" },
       { property: "og:description", content: "Reliable home remodeling and construction services." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
