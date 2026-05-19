@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "@/assets/logo.png";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -22,13 +23,9 @@ export function Header() {
           <span className="hidden sm:inline text-navy-foreground/70">Licensed · Bonded · Insured</span>
         </div>
       </div>
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2">
-          <div className="size-10 rounded-sm bg-[image:var(--gradient-accent)] grid place-items-center text-primary-foreground font-display font-bold">SL</div>
-          <div className="leading-tight">
-            <div className="font-display font-bold tracking-tight">Subh & Labh</div>
-            <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">General Contracting</div>
-          </div>
+      <div className="container mx-auto px-6 py-3 flex items-center justify-between">
+        <Link to="/" className="flex items-center gap-3">
+          <img src={logo} alt="Rite Tech Construction" className="h-14 md:h-16 w-auto" />
         </Link>
         <nav className="hidden lg:flex items-center gap-8">
           {nav.map((n) => (
