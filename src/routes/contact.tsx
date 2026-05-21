@@ -10,6 +10,12 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Get a free estimate. Call +1-212-671-0950 or email info@ritetechconstruction.com." },
       { property: "og:title", content: "Contact Rite Tech" },
       { property: "og:description", content: "Reach our team for a free estimate." },
+      { property: "og:url", content: "https://ritetechconstruction.com/contact" },
+      { name: "twitter:title", content: "Contact Rite Tech Construction" },
+      { name: "twitter:description", content: "Get a free estimate. Call +1-212-671-0950 or email info@ritetechconstruction.com." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ritetechconstruction.com/contact" },
     ],
   }),
   component: ContactPage,

@@ -28,6 +28,11 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    setOpen(false);
+  }, [location.pathname]);
+
   return (
     <AnimatePresence>
       {isVisible && (

@@ -1,8 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { CtaBanner } from "@/components/CtaBanner";
+import StatCounter from "@/components/ui/StatCounter";
 import { ArrowRight, HardHat, Hammer, Headphones, Leaf, CheckCircle2, Quote } from "lucide-react";
 import hero from "@/assets/hero.jpg";
+import {
+Shield, Users, Award, Building, Search, MapPin, Home,
+  Handshake, FileCheck, Eye, TrendingUp, ChevronRight, Star, HelpCircle,
+} from "lucide-react";
 import kitchen from "@/assets/project-kitchen.jpg";
 import bath from "@/assets/project-bath.jpg";
 import { motion } from "framer-motion";
@@ -13,8 +18,29 @@ import smart from "@/assets/project-smart.jpg";
 import team from "@/assets/about-team.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Rite Tech Construction — Home Remodeling & Construction" },
+      { name: "description", content: "Licensed, bonded, and insured general contractor delivering kitchens, bathrooms, full renovations, and quality craftsmanship in New York City." },
+      { property: "og:title", content: "Rite Tech Construction — Home Remodeling & Construction" },
+      { property: "og:description", content: "Licensed, bonded, and insured general contractor delivering kitchens, bathrooms, full renovations, and quality craftsmanship in New York City." },
+      { property: "og:url", content: "https://ritetechconstruction.com/" },
+      { name: "twitter:title", content: "Rite Tech Construction — Home Remodeling & Construction" },
+      { name: "twitter:description", content: "Licensed, bonded, and insured general contractor delivering kitchens, bathrooms, full renovations, and quality craftsmanship in New York City." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ritetechconstruction.com/" },
+    ],
+  }),
   component: Index,
 });
+
+const stats = [
+  { icon: Users, value: "1500+", label: "Happy Customers" },
+  { icon: Building, value: "25+", label: "Projects Delivered" },
+  { icon: Award, value: "15+", label: "Years Experience" },
+  { icon: Shield, value: "100%", label: "Clear Titles" },
+];
 
 const projects = [
   { img: kitchen, title: "Kitchen Remodel", text: "Complete kitchen remodels from layout to finish — cabinetry, countertops, tile, plumbing, and finishing details." },
@@ -37,38 +63,8 @@ function Index() {
       {/* Top notice bar */}
 
       {/* Hero */}
-      {/* <section className="relative h-[88vh] min-h-[600px] flex items-center">
-        <img src={hero} alt="Modern home interior under construction" className="absolute inset-0 size-full object-cover" width={1920} height={1280} />
-        <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
-        <div className="relative container mx-auto px-6 text-navy-foreground max-w-4xl">
-          <p className="inline-block bg-primary/90 px-4 py-1.5 text-xs uppercase tracking-[0.2em] mb-6 rounded-sm">General Contracting</p>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.05] mb-6">
-            Reliable Home Remodeling <span className="text-primary">& Construction</span>
-          </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-2xl mb-10">
-            Your home deserves work that's clean, organized, and built to last. We handle every step — from planning to the final walkthrough — delivering results you can trust.
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <Link to="/contact" className="inline-flex items-center gap-2 px-7 py-4 bg-[image:var(--gradient-accent)] text-primary-foreground font-medium rounded-sm hover:opacity-90 transition shadow-[var(--shadow-glow)]">
-              Get a Free Estimate <ArrowRight className="size-4" />
-            </Link>
-            <Link to="/projects" className="inline-flex items-center gap-2 px-7 py-4 border border-white/40 hover:bg-white/10 font-medium rounded-sm transition">
-              Our Work
-            </Link>
-          </div>
-        </div>
-      </section> */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        {/* <video
-          src={heroBg}
-          alt="Indra Properties premium open plots"
-          className="absolute inset-0 w-full h-full object-cover"
-          width={1920}
-          height={1080}
-          autoPlay
-          loop
-          muted
-        /> */}
+
         <video
           className="absolute inset-0 h-full w-full object-cover md:hidden"
           width={720}
@@ -78,13 +74,14 @@ function Index() {
           muted
           playsInline
           preload="auto"
+          src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
+          onError={(event) => console.error('Mobile hero video failed to load', event)}
         >
           <source
-            // src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1776999988/Mobile_Alignment_Video_1_ew0pwd.mp4"
             src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
             type="video/mp4"
           />
-          Indra Properties premium open plots mobile video background
+          Rite tech constructions video background
         </video>
         <video
           className="absolute inset-0 hidden h-full w-full object-cover md:block "
@@ -95,7 +92,9 @@ function Index() {
           muted
           playsInline
           preload="auto"
+          src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
           aria-label="Indra Properties premium video"
+          onError={(event) => console.error('Desktop hero video failed to load', event)}
         >
           <source
             src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
@@ -107,17 +106,17 @@ function Index() {
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.p
-            initial={{ opacity: 0, y: 20, color: "#000000" }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-primary font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4"
           >
             Premium Construction sites  & Land Investments
           </motion.p>
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6"
           >
             Trust and quality You  
@@ -125,19 +124,17 @@ function Index() {
             <span className="text-gold-gradient">Can built on..</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 10}}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="text-gold-gradient text-white font-body max-w-xl mx-auto mb-10 text-base md:text-lg drop-shadow-[0_12px_16px_rgba(0,0,0,0.6)]"
           >
-            {/* Invest in NUDA & GMC-approved open plots at prime locations with
-            world-class amenities and guaranteed returns. */}
             Invest with RITE-TECH prime locations with  guaranteed returns..
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
             className="flex flex-col sm:flex-row items-center gap-4 justify-center"
           >
             <a
@@ -156,6 +153,64 @@ function Index() {
               <ArrowRight className="size-4" />
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+        {/* About Intro */}
+      <section className="py-20 bg-navy-gradient">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-primary font-body text-xs tracking-[0.25em] uppercase mb-3"
+              >
+                Who We Are
+              </motion.p>
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6"
+              >
+                Trusted constructions
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2 }}
+                className="text-muted-foreground font-body leading-relaxed mb-4"
+              >
+                With over 15 years of trust and excellence, Indra Properties is one of the leading
+                real estate developers specializing in premium open plots across Andra Pradesh's
+                fastest-growing corridors.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.3 }}
+                className="text-muted-foreground font-body leading-relaxed"
+              >
+                Whether you're looking for a dream home site or a smart investment, our team ensures
+                you get the best plot options with 100% legal clearance and world-class infrastructure.
+              </motion.p>
+            </div>
+            <div className="grid grid-cols-2 gap-5">
+              {stats.map((stat, index) => (
+                <StatCounter
+                  key={stat.label}
+                  value={stat.value}
+                  label={stat.label}
+                  icon={stat.icon}
+                  delay={index * 0.14}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

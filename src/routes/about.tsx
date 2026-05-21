@@ -14,6 +14,12 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "Decades of trusted construction experience. Skilled craftsmen, sustainable design, and a clean process from start to finish." },
       { property: "og:title", content: "About Rite Tech" },
       { property: "og:description", content: "Trusted general contractors building futures." },
+      { property: "og:url", content: "https://ritetechconstruction.com/about" },
+      { name: "twitter:title", content: "About Rite Tech Construction" },
+      { name: "twitter:description", content: "Decades of trusted construction experience. Skilled craftsmen, sustainable design, and a clean process from start to finish." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ritetechconstruction.com/about" },
     ],
   }),
   component: AboutPage,

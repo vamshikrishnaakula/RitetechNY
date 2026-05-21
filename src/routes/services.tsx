@@ -13,6 +13,12 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Architecture, design & engineering, construction management, and full renovation services for residential projects." },
       { property: "og:title", content: "Our Services" },
       { property: "og:description", content: "Comprehensive construction and design services." },
+      { property: "og:url", content: "https://ritetechconstruction.com/services" },
+      { name: "twitter:title", content: "Services — Rite Tech Construction" },
+      { name: "twitter:description", content: "Architecture, design & engineering, construction management, and full renovation services for residential projects." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ritetechconstruction.com/services" },
     ],
   }),
   component: ServicesPage,

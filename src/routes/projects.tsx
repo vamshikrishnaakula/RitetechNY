@@ -10,6 +10,12 @@ export const Route = createFileRoute("/projects")({
       { name: "description", content: "A showcase of our most innovative architectural and construction achievements." },
       { property: "og:title", content: "Our Works" },
       { property: "og:description", content: "Project showcase by Rite Tech Construction." },
+      { property: "og:url", content: "https://ritetechconstruction.com/projects" },
+      { name: "twitter:title", content: "Our Works — Rite Tech Construction" },
+      { name: "twitter:description", content: "A showcase of our most innovative architectural and construction achievements." },
+    ],
+    links: [
+      { rel: "canonical", href: "https://ritetechconstruction.com/projects" },
     ],
   }),
   component: ProjectsPage,

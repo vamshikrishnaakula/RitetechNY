@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import logo from "@/assets/logo.png";
+import { SplashScreen } from "@/components/SplashScreen";
 
 function NotFoundComponent() {
   return (
@@ -77,14 +79,21 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Rite Tech Construction — Home Remodeling & Construction" },
       { property: "og:description", content: "Licensed, bonded, and insured general contractor. Kitchens, bathrooms, full home renovations, and structural work — built to last." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Rite Tech Construction" },
+      { property: "og:url", content: "https://ritetechconstruction.com/" },
+      { name: "robots", content: "index, follow" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Rite Tech Construction — Home Remodeling & Construction" },
       { name: "twitter:description", content: "Licensed, bonded, and insured general contractor. Kitchens, bathrooms, full home renovations, and structural work — built to last." },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7501ae31-4976-410d-8ed6-b9ec18ed0f9c/id-preview-419fb515--d1f17f19-7e21-4a69-9512-cdaa13d4c854.lovable.app-1779222759830.png" },
+      { property: "og:image:alt", content: "Rite Tech Construction preview image" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7501ae31-4976-410d-8ed6-b9ec18ed0f9c/id-preview-419fb515--d1f17f19-7e21-4a69-9512-cdaa13d4c854.lovable.app-1779222759830.png" },
+      { name: "twitter:image:alt", content: "Rite Tech Construction preview image" },
     ],
-    links: [      { rel: "icon", href: "", type: "image/svg+xml" },
-      { rel: "apple-touch-icon", href: "" },      { rel: "stylesheet", href: appCss },
+    links: [
+      { rel: "icon", href: logo, type: "image/png" },
+      { rel: "apple-touch-icon", href: logo },
+      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" },
@@ -103,6 +112,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <SplashScreen />
         {children}
         <Scripts />
       </body>
