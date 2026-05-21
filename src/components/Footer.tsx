@@ -33,7 +33,7 @@ export function Footer() {
         <div>
           <h4 className="font-display font-semibold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm opacity-80">
-            <li className="flex gap-2"><Phone className="size-4 mt-0.5 text-primary shrink-0" /><span>+1-740-405-1114</span></li>
+            <li className="flex gap-2"><Phone className="size-4 mt-0.5 text-primary shrink-0" /><span>+1-212-671-0950</span></li>
             <li className="flex gap-2"><Mail className="size-4 mt-0.5 text-primary shrink-0" /><span>info@ritetechconstruction.com</span></li>
             <li className="flex gap-2"><MapPin className="size-4 mt-0.5 text-primary shrink-0" /><span>New York, NY</span></li>
           </ul>

@@ -7,7 +7,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Rite Tech Construction" },
-      { name: "description", content: "Get a free estimate. Call +1-740-405-1114 or email info@ritetechconstruction.com." },
+      { name: "description", content: "Get a free estimate. Call +1-212-671-0950 or email info@ritetechconstruction.com." },
       { property: "og:title", content: "Contact Rite Tech" },
       { property: "og:description", content: "Reach our team for a free estimate." },
     ],
@@ -32,7 +32,7 @@ function ContactPage() {
       <section className="container mx-auto px-6 py-20 grid md:grid-cols-5 gap-10">
         <div className="md:col-span-2 space-y-6">
           {[
-            { icon: Phone, label: "Phone", value: "+1-740-405-1114" },
+            { icon: Phone, label: "Phone", value: "+1-212-671-0950" },
             { icon: Mail, label: "Email", value: "info@ritetechconstruction.com" },
             { icon: MapPin, label: "Service Area", value: "New York City" },
             { icon: Clock, label: "Hours", value: "Mon–Sat · 8am–6pm" },

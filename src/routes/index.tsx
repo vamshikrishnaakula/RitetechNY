@@ -5,6 +5,7 @@ import { ArrowRight, HardHat, Hammer, Headphones, Leaf, CheckCircle2, Quote } fr
 import hero from "@/assets/hero.jpg";
 import kitchen from "@/assets/project-kitchen.jpg";
 import bath from "@/assets/project-bath.jpg";
+import { motion } from "framer-motion";
 import floor from "@/assets/project-floor.jpg";
 import home from "@/assets/project-home.jpg";
 import exterior from "@/assets/project-exterior.jpg";
@@ -34,12 +35,9 @@ function Index() {
   return (
     <SiteLayout>
       {/* Top notice bar */}
-      <div className="bg-primary text-primary-foreground text-center py-2.5 text-sm font-medium tracking-wide">
-        Interior Design Services Provided
-      </div>
 
       {/* Hero */}
-      <section className="relative h-[88vh] min-h-[600px] flex items-center">
+      {/* <section className="relative h-[88vh] min-h-[600px] flex items-center">
         <img src={hero} alt="Modern home interior under construction" className="absolute inset-0 size-full object-cover" width={1920} height={1280} />
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="relative container mx-auto px-6 text-navy-foreground max-w-4xl">
@@ -58,6 +56,106 @@ function Index() {
               Our Work
             </Link>
           </div>
+        </div>
+      </section> */}
+            <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* <video
+          src={heroBg}
+          alt="Indra Properties premium open plots"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          autoPlay
+          loop
+          muted
+        /> */}
+        <video
+          className="absolute inset-0 h-full w-full object-cover md:hidden"
+          width={720}
+          height={1280}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          <source
+            // src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1776999988/Mobile_Alignment_Video_1_ew0pwd.mp4"
+            src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
+            type="video/mp4"
+          />
+          Indra Properties premium open plots mobile video background
+        </video>
+        <video
+          className="absolute inset-0 hidden h-full w-full object-cover md:block "
+          width={1920}
+          height={1080}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-label="Indra Properties premium video"
+        >
+          <source
+            src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
+            type="video/mp4"
+          />
+          Indra Properties premium open plots video background
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)]" />
+        {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.p
+            initial={{ opacity: 0, y: 20, color: "#000000" }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-primary font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4"
+          >
+            Premium Construction sites  & Land Investments
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6"
+          >
+            Trust and quality You  
+            <br />
+            <span className="text-gold-gradient">Can built on..</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 10}}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-gold-gradient text-white font-body max-w-xl mx-auto mb-10 text-base md:text-lg drop-shadow-[0_12px_16px_rgba(0,0,0,0.6)]"
+          >
+            {/* Invest in NUDA & GMC-approved open plots at prime locations with
+            world-class amenities and guaranteed returns. */}
+            Invest with RITE-TECH prime locations with  guaranteed returns..
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7 }}
+            className="flex flex-col sm:flex-row items-center gap-4 justify-center"
+          >
+            <a
+              href=""
+              download
+              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 bg-[image:var(--gradient-accent)] text-primary-foreground font-semibold shadow-[0_24px_52px_rgba(255,184,0,0.16)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_58px_rgba(255,184,0,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            >
+              Download Brochure
+              <ArrowRight className="size-4 text-primary-foreground" />
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 border border-white/20 bg-white/10 text-white font-semibold shadow-[0_20px_45px_rgba(0,0,0,0.18)] transition duration-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              Book Free Site Visit
+              <ArrowRight className="size-4" />
+            </Link>
+          </motion.div>
         </div>
       </section>
 

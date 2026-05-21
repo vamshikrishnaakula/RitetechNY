@@ -83,8 +83,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7501ae31-4976-410d-8ed6-b9ec18ed0f9c/id-preview-419fb515--d1f17f19-7e21-4a69-9512-cdaa13d4c854.lovable.app-1779222759830.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/7501ae31-4976-410d-8ed6-b9ec18ed0f9c/id-preview-419fb515--d1f17f19-7e21-4a69-9512-cdaa13d4c854.lovable.app-1779222759830.png" },
     ],
-    links: [
-      { rel: "stylesheet", href: appCss },
+    links: [      { rel: "icon", href: "", type: "image/svg+xml" },
+      { rel: "apple-touch-icon", href: "" },      { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" },
