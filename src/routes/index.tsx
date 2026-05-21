@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect, useRef } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
 import { CtaBanner } from "@/components/CtaBanner";
 import StatCounter from "@/components/ui/StatCounter";
@@ -58,6 +59,23 @@ const testimonials = [
 ];
 
 function Index() {
+  const heroVideoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const video = heroVideoRef.current;
+    if (!video) return;
+
+    video.muted = true;
+    video.playsInline = true;
+
+    const playPromise = video.play();
+    if (playPromise?.catch) {
+      playPromise.catch((error) => {
+        console.warn("Hero video autoplay prevented:", error);
+      });
+    }
+  }, []);
+
   return (
     <SiteLayout>
       {/* Top notice bar */}
@@ -66,25 +84,8 @@ function Index() {
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
         <video
-          className="absolute inset-0 h-full w-full object-cover md:hidden"
-          width={720}
-          height={1280}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
-          onError={(event) => console.error('Mobile hero video failed to load', event)}
-        >
-          <source
-            src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
-            type="video/mp4"
-          />
-          Rite tech constructions video background
-        </video>
-        <video
-          className="absolute inset-0 hidden h-full w-full object-cover md:block "
+          ref={heroVideoRef}
+          className="absolute inset-0 h-full w-full object-cover"
           width={1920}
           height={1080}
           autoPlay
@@ -92,15 +93,15 @@ function Index() {
           muted
           playsInline
           preload="auto"
-          src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
-          aria-label="Rite tech premium video"
-          onError={(event) => console.error('Desktop hero video failed to load', event)}
+          poster={hero}
+          aria-label="Rite Tech hero video"
+          onError={(event) => console.error("Hero video failed to load", event)}
         >
           <source
             src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
             type="video/mp4"
           />
-          Rite tech premium open plots video background
+          Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)]" />
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
@@ -243,7 +244,7 @@ function Index() {
             <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-3">Rite Tech</p>
             <h2 className="text-4xl md:text-5xl font-bold mb-5">Construction Experience You Can Trust</h2>
             <p className="text-muted-foreground text-lg mb-8">
-              We deliver innovative construction solutions with quality craftsmanship and sustainable design — projects built to last.
+              We deliver innovative construction solutions with quality il and sustainable design — projects built to last.
             </p>
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div>

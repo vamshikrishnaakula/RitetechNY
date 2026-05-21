@@ -42,7 +42,7 @@ const directors = [
       "My focus is simple: deliver every project, discipline, and clear communication. Clients should understand the scope, schedule, quality expectations, and progress at every stage.",
   },
   {
-    name: "Mr. Jakeer Khan",
+    name: "Mr. Zakeer Khan",
     title: "Co-Managing Director",
     quote:
       "We are committed to dependable construction and clean finishing. From planning to final walkthrough, we keep the work organized, practical, professional, and reliable.",
