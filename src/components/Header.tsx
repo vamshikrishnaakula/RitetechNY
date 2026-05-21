@@ -1,8 +1,15 @@
 import { Link, useLocation } from "@tanstack/react-router";
-import { Phone, Menu, X } from "lucide-react";
+import { MoreVertical, Phone, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import logo from "@/assets/logo.png";
+
+declare global {
+  interface Window {
+    google?: any;
+    googleTranslateElementInit?: () => void;
+  }
+}
 
 const nav = [
   { to: "/", label: "Home" },
@@ -16,6 +23,31 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
+
+  const initGoogleTranslate = () => {
+    const mount = document.getElementById("google_translate_element");
+
+    if (!mount || mount.childElementCount > 0 || !window.google?.translate) {
+      return;
+    }
+
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+      },
+      "google_translate_element",
+    );
+  };
+
+  const handleTranslateClick = () => {
+    const combo = document.querySelector<HTMLSelectElement>(
+      "#google_translate_element select.goog-te-combo",
+    );
+
+    if (combo) {
+      combo.focus();
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +65,26 @@ export function Header() {
     setOpen(false);
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (!isVisible) return;
+
+    window.googleTranslateElementInit = initGoogleTranslate;
+
+    if (window.google?.translate) {
+      initGoogleTranslate();
+      return;
+    }
+
+    if (!document.getElementById("google-translate-script")) {
+      const script = document.createElement("script");
+      script.id = "google-translate-script";
+      script.type = "text/javascript";
+      script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, [isVisible]);
+
   return (
     <AnimatePresence>
       {isVisible && (
@@ -45,11 +97,24 @@ export function Header() {
           style={{ pointerEvents: isVisible ? "auto" : "none" }}
         >
       <div className="bg-navy text-navy-foreground text-sm container mx-auto px-4">
-            <div className="container mx-auto px-6 py-2 flex items-center justify-between">
+            <div className="container mx-auto px-6 py-2 flex items-center justify-between gap-3">
               <a href="tel:+12126710950" className="flex items-center gap-2 hover:text-primary transition">
                 <Phone className="size-3.5" /> +1-212-671-0950
               </a>
-              <span className="hidden sm:inline text-navy-foreground/70">Licensed · Bonded · Insured</span>
+              <div className="flex items-center gap-3">
+                <span className="hidden sm:inline text-navy-foreground/70">Licensed · Bonded · Insured</span>
+                {/* <div className="change_langOuter flex items-center gap-1.5" aria-label="Translate website">
+                  <div id="google_translate_element" className="cursor-pointer" />
+                  <button
+                    type="button"
+                    onClick={handleTranslateClick}
+                    className="change-lang-trigger flex items-center gap-1.5 text-navy-foreground hover:text-primary transition"
+                    aria-label="Open language selector"
+                  >
+                    <MoreVertical className="size-3.5 text-primary" aria-hidden="true" />
+                  </button>
+                </div> */}
+              </div>
             </div>
           </div>
           <div className="">
@@ -57,7 +122,7 @@ export function Header() {
               <Link to="/" className="flex items-center gap-2">
                 <img
                   src={logo}
-                  alt="Indra Properties"
+                  alt="Rite Tech Construction"
                   className="h-14 w-auto rounded-sm shadow-lg"
                 />
               </Link>
@@ -75,7 +140,8 @@ export function Header() {
                   >
                     {link.label}
                   </Link>
-                ))}
+                  ))}
+      
                 <a
                   href="tel:+12126710950"
                   className="flex items-center gap-2 bg-gold-gradient text-primary-foreground px-5 py-2.5 rounded-md font-body text-sm font-semibold tracking-wide transition-transform hover:scale-105px-6 py-3 bg-[image:var(--gradient-accent)] rounded-sm font-medium hover:opacity-90 transition"
@@ -84,7 +150,7 @@ export function Header() {
                   Get Free Estimate
                 </a>
               </div>
-
+               
               <button
                 onClick={() => setOpen(!open)}
                 className="lg:hidden rounded-md p-2 text-black transition-colors hover:bg-black/5 hover:text-black focus:outline-none focus:ring-2 focus:ring-black/20"

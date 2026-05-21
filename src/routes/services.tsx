@@ -10,12 +10,12 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Rite Tech Construction" },
-      { name: "description", content: "Architecture, design & engineering, construction management, and full renovation services for residential projects." },
+      { name: "description", content: "Professional construction services including planning, renovation, remodeling, structural coordination, flooring, finishing, and project management." },
       { property: "og:title", content: "Our Services" },
-      { property: "og:description", content: "Comprehensive construction and design services." },
+      { property: "og:description", content: "Construction-related services delivered with field experience, clear coordination, and professional workmanship." },
       { property: "og:url", content: "https://ritetechconstruction.com/services" },
       { name: "twitter:title", content: "Services — Rite Tech Construction" },
-      { name: "twitter:description", content: "Architecture, design & engineering, construction management, and full renovation services for residential projects." },
+      { name: "twitter:description", content: "Professional construction, renovation, remodeling, finishing, and project coordination services." },
     ],
     links: [
       { rel: "canonical", href: "https://ritetechconstruction.com/services" },
@@ -25,10 +25,10 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { img: smart, title: "Architecture and Planning", text: "Smart layouts that set the foundation. Space planning, drawing coordination, and permit-ready documentation focused on function, code compliance, and realistic execution." },
-  { img: home, title: "Design and Engineering", text: "Buildable design with technical clarity. We align design intent with structural and engineering requirements so what's planned can be built without surprises." },
-  { img: kitchen, title: "Construction Management", text: "Clear control from start to finish. Scheduling, trade coordination, inspections, and on-site execution keep the project moving smoothly with full accountability." },
-  { img: floor, title: "Renovation and Remodeling", text: "Well-executed work, delivered properly. Kitchen remodels, bathroom remodels, and full home renovations coordinated under one process for consistent quality." },
+  { img: smart, title: "Project Planning and Coordination", text: "Practical planning that turns an idea into an executable scope. We coordinate drawings, materials, trades, timelines, and site requirements before work begins." },
+  { img: home, title: "Construction and Structural Works", text: "Professional support for building works, structural coordination, masonry, framing, concrete-related works, exterior improvements, and site execution." },
+  { img: kitchen, title: "Renovation and Remodeling", text: "Kitchen upgrades, bathroom renovations, full home improvements, layout changes, and interior transformations managed with proper sequencing and workmanship." },
+  { img: floor, title: "Finishing, Flooring, and Tile Works", text: "Clean finishing work including flooring, tile, surface preparation, painting coordination, fixtures, detailing, and final presentation ready for handover." },
 ];
 
 function ServicesPage() {
@@ -37,9 +37,9 @@ function ServicesPage() {
       <section className="bg-navy text-navy-foreground py-24">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-4">Our Services</p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Comprehensive Construction and Design Services</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Professional Construction Services for Every Stage</h1>
           <p className="text-lg opacity-80 max-w-2xl">
-            From initial planning to final build, we provide a structured approach that keeps residential projects organized, efficient, and well executed.
+            From early planning to final finishing, Rite Tech provides construction-related services shaped by Oman industry experience, American quality expectations, and practical site knowledge.
           </p>
         </div>
       </section>

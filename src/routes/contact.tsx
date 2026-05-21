@@ -7,12 +7,12 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Rite Tech Construction" },
-      { name: "description", content: "Get a free estimate. Call +1-212-671-0950 or email info@ritetechconstruction.com." },
+      { name: "description", content: "Discuss your construction, renovation, remodeling, or finishing project with Rite Tech Construction." },
       { property: "og:title", content: "Contact Rite Tech" },
-      { property: "og:description", content: "Reach our team for a free estimate." },
+      { property: "og:description", content: "Contact Rite Tech Construction to discuss scope, timeline, and professional project delivery." },
       { property: "og:url", content: "https://ritetechconstruction.com/contact" },
       { name: "twitter:title", content: "Contact Rite Tech Construction" },
-      { name: "twitter:description", content: "Get a free estimate. Call +1-212-671-0950 or email info@ritetechconstruction.com." },
+      { name: "twitter:description", content: "Discuss your construction, renovation, remodeling, or finishing project with Rite Tech Construction." },
     ],
     links: [
       { rel: "canonical", href: "https://ritetechconstruction.com/contact" },
@@ -28,9 +28,9 @@ function ContactPage() {
       <section className="bg-navy text-navy-foreground py-24">
         <div className="container mx-auto px-6 max-w-4xl">
           <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-4">Contact</p>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Get a Free Estimate</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Discuss Your Construction Project</h1>
           <p className="text-lg opacity-80 max-w-2xl">
-            Tell us about your project. We'll get back within one business day with next steps.
+            Share your scope, location, timeline, and goals. We will review the details and respond with practical next steps.
           </p>
         </div>
       </section>
@@ -59,7 +59,7 @@ function ContactPage() {
           onSubmit={(e) => { e.preventDefault(); setSent(true); }}
           className="md:col-span-3 bg-card border border-border rounded-sm p-8 space-y-5"
         >
-          <h2 className="text-2xl font-bold">Send us a message</h2>
+          <h2 className="text-2xl font-bold">Send your project details</h2>
           <div className="grid sm:grid-cols-2 gap-4">
             <Field label="Full name"><input required className="input" placeholder="Jane Doe" /></Field>
             <Field label="Email"><input required type="email" className="input" placeholder="jane@email.com" /></Field>
@@ -68,20 +68,20 @@ function ContactPage() {
             <Field label="Phone"><input className="input" placeholder="(555) 555-5555" /></Field>
             <Field label="Project type">
               <select className="input">
-                <option>Kitchen Remodel</option>
-                <option>Bathroom Remodel</option>
-                <option>Full Home Renovation</option>
-                <option>Flooring</option>
-                <option>Addition / Exterior</option>
+                <option>Construction Work</option>
+                <option>Renovation / Remodeling</option>
+                <option>Kitchen or Bathroom Upgrade</option>
+                <option>Flooring / Tile / Finishing</option>
+                <option>Structural / Exterior Work</option>
                 <option>Other</option>
               </select>
             </Field>
           </div>
           <Field label="Tell us about your project">
-            <textarea required rows={5} className="input resize-none" placeholder="Scope, timeline, budget range..." />
+            <textarea required rows={5} className="input resize-none" placeholder="Scope, location, timeline, budget range, and any site details..." />
           </Field>
           <button type="submit" className="w-full sm:w-auto px-7 py-3.5 bg-[image:var(--gradient-accent)] text-primary-foreground font-medium rounded-sm hover:opacity-90 transition">
-            {sent ? "Thanks — we'll be in touch!" : "Request Estimate"}
+            {sent ? "Thanks - we'll be in touch!" : "Request Consultation"}
           </button>
         </form>
       </section>

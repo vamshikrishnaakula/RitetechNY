@@ -11,12 +11,12 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Rite Tech Construction" },
-      { name: "description", content: "Decades of trusted construction experience. Skilled craftsmen, sustainable design, and a clean process from start to finish." },
+      { name: "description", content: "Professional builder portfolio with long-term Oman construction industry experience and American-standard project execution." },
       { property: "og:title", content: "About Rite Tech" },
-      { property: "og:description", content: "Trusted general contractors building futures." },
+      { property: "og:description", content: "Experienced construction leadership, professional workmanship, and disciplined project delivery." },
       { property: "og:url", content: "https://ritetechconstruction.com/about" },
       { name: "twitter:title", content: "About Rite Tech Construction" },
-      { name: "twitter:description", content: "Decades of trusted construction experience. Skilled craftsmen, sustainable design, and a clean process from start to finish." },
+      { name: "twitter:description", content: "Professional builder portfolio with long-term Oman construction industry experience and American-standard project execution." },
     ],
     links: [
       { rel: "canonical", href: "https://ritetechconstruction.com/about" },
@@ -26,12 +26,12 @@ export const Route = createFileRoute("/about")({
 });
 
 const whyChoose = [
-  "15+ years of construction and site development expertise",
-  "Licensed, bonded, and insured project delivery",
-  "Transparent pricing, documentation, and timelines",
-  "Prime locations with thoughtful planning and permitting",
-  "Client-first service from kickoff through handover",
-  "Sustainable building practices for long-term value",
+  "15+ years of practical construction and site delivery experience",
+  "Strong exposure to Oman construction industry practices",
+  "American-standard quality expectations and client communication",
+  "Residential, commercial, renovation, and finishing capability",
+  "Transparent scope, scheduling, documentation, and handover",
+  "Professional workmanship focused on durability and long-term value",
 ];
 
 const directors = [
@@ -39,13 +39,13 @@ const directors = [
     name: "Mr. Jawad Khan",
     title: "Managing Director",
     quote:
-      "Our focus is simple: build every project with craftsmanship and clear communication. We make sure every client understands the process, the schedule, and the quality we deliver.",
+      "My focus is simple: deliver every project, discipline, and clear communication. Clients should understand the scope, schedule, quality expectations, and progress at every stage.",
   },
   {
     name: "Mr. Jakeer Khan",
     title: "Co-Managing Director",
     quote:
-      "We are committed to creating dependable, beautifully finished spaces. From planning to final walkthrough, our team keeps the experience professional, efficient, and reliable.",
+      "We are committed to dependable construction and clean finishing. From planning to final walkthrough, we keep the work organized, practical, professional, and reliable.",
   },
 ];
 
@@ -60,7 +60,7 @@ function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
-            Two leaders. One promise: honest, high-quality construction.
+            Professional building experience shaped by Oman and American construction standards.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ function AboutPage() {
             transition={{ delay: 0.2 }}
             className="text-lg opacity-80 max-w-2xl mx-auto"
           >
-            Rite Tech is led by a dedicated management team that combines deep industry experience with a customer-first approach. Together, they guide every project toward timely delivery, clear communication, and long-lasting results.
+            Rite Tech represents a professional construction portfolio built on years of field experience, disciplined execution, and a commitment to quality work across construction, renovation, remodeling, and finishing projects.
           </motion.p>
         </div>
       </section>
@@ -77,22 +77,22 @@ function AboutPage() {
         <div>
           <h2 className="text-4xl font-bold mb-5">Our story</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            Rite Tech began with a vision to make construction and renovation simple, reliable, and transparent. Over the years, we have grown into a trusted local partner for homeowners, investors, and developers by keeping every project organized from first estimate to final handover.
+            Rite Tech was created to present construction work with the seriousness it deserves: clear planning, professional coordination, durable methods, and reliable delivery. The portfolio reflects hands-on experience developed through the Oman construction industry and strengthened by American project standards.
           </p>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            We deliver tailored construction solutions for residential remodeling, site development, and premium plot projects. Our strength comes from disciplined execution, strong trade coordination, and a commitment to do the job right the first time.
+            We support construction-related works including residential improvements, commercial upgrades, remodeling, structural coordination, masonry, flooring, tile, exterior works, and interior finishing. Our strength is practical execution and the ability to keep projects organized from first discussion to final handover.
           </p>
           <div className="grid sm:grid-cols-2 gap-4">
             <div className="rounded-sm border border-border bg-card p-6">
               <p className="text-primary text-xs uppercase tracking-[0.3em] font-semibold mb-3">Our mission</p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Deliver exceptional construction and land investments with honesty, quality, and a smooth client experience.
+                Deliver professional construction services with honesty, quality workmanship, clear communication, and a smooth client experience.
               </p>
             </div>
             <div className="rounded-sm border border-border bg-card p-6">
               <p className="text-primary text-xs uppercase tracking-[0.3em] font-semibold mb-3">Our vision</p>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Become the most trusted home construction partner in our region through consistent delivery and lasting customer trust.
+                Build a portfolio recognized for professionalism, reliable execution, and construction quality across every project category.
               </p>
             </div>
           </div>

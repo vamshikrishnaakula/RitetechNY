@@ -7,12 +7,12 @@ export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
       { title: "Our Works — Rite Tech Construction" },
-      { name: "description", content: "A showcase of our most innovative architectural and construction achievements." },
+      { name: "description", content: "A professional construction portfolio showcasing renovation, remodeling, finishing, exterior, and site-related works." },
       { property: "og:title", content: "Our Works" },
-      { property: "og:description", content: "Project showcase by Rite Tech Construction." },
+      { property: "og:description", content: "Construction portfolio by Rite Tech Construction, built on professional execution and field experience." },
       { property: "og:url", content: "https://ritetechconstruction.com/projects" },
       { name: "twitter:title", content: "Our Works — Rite Tech Construction" },
-      { name: "twitter:description", content: "A showcase of our most innovative architectural and construction achievements." },
+      { name: "twitter:description", content: "A professional construction portfolio showcasing renovation, remodeling, finishing, and site-related works." },
     ],
     links: [
       { rel: "canonical", href: "https://ritetechconstruction.com/projects" },
@@ -50,7 +50,7 @@ function ProjectsPage() {
           <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-3">Our Works</p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">Project Showcase</h1>
           <p className="text-base sm:text-lg opacity-80 max-w-2xl leading-relaxed">
-            Explore our most innovative architectural and construction achievements — built with precision, premium materials, and attention to every detail.
+            Explore selected construction, renovation, finishing, and site-related works that reflect practical experience, professional coordination, and attention to every detail.
           </p>
         </div>
       </section>

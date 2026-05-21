@@ -21,12 +21,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Rite Tech Construction — Home Remodeling & Construction" },
-      { name: "description", content: "Licensed, bonded, and insured general contractor delivering kitchens, bathrooms, full renovations, and quality craftsmanship in New York City." },
+      { name: "description", content: "Professional construction portfolio backed by long-term experience in the Oman construction industry and American-standard project delivery." },
       { property: "og:title", content: "Rite Tech Construction — Home Remodeling & Construction" },
-      { property: "og:description", content: "Licensed, bonded, and insured general contractor delivering kitchens, bathrooms, full renovations, and quality craftsmanship in New York City." },
+      { property: "og:description", content: "Construction, renovation, remodeling, structural work, finishing, and project coordination delivered with professional standards and proven field experience." },
       { property: "og:url", content: "https://ritetechconstruction.com/" },
       { name: "twitter:title", content: "Rite Tech Construction — Home Remodeling & Construction" },
-      { name: "twitter:description", content: "Licensed, bonded, and insured general contractor delivering kitchens, bathrooms, full renovations, and quality craftsmanship in New York City." },
+      { name: "twitter:description", content: "Experienced builder delivering construction, renovation, remodeling, and finishing services with discipline, quality, and accountability." },
     ],
     links: [
       { rel: "canonical", href: "https://ritetechconstruction.com/" },
@@ -36,25 +36,25 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { icon: Users, value: "1500+", label: "Happy Customers" },
-  { icon: Building, value: "25+", label: "Projects Delivered" },
-  { icon: Award, value: "15+", label: "Years Experience" },
-  { icon: Shield, value: "100%", label: "Clear Titles" },
+  { icon: Users, value: "1500+", label: "Clients Served" },
+  { icon: Building, value: "250+", label: "Projects Completed" },
+  { icon: Award, value: "15+", label: "Years in Construction" },
+  { icon: Shield, value: "100%", label: "Professional Commitment" },
 ];
 
 const projects = [
   { img: kitchen, title: "Kitchen Remodel", text: "Complete kitchen remodels from layout to finish — cabinetry, countertops, tile, plumbing, and finishing details." },
   { img: bath, title: "Bathroom Remodeling", text: "Tile showers, vanities, plumbing upgrades, waterproofing, and ventilation — done right the first time." },
-  { img: floor, title: "Flooring & Tile Work", text: "Tile, hardwood, LVP, and specialty flooring with proper surface prep for long-term durability." },
+  { img: floor, title: "Flooring & Tile Works", text: "Surface preparation, tile, hardwood, LVP, and specialty flooring installed for long-term strength and clean presentation." },
   { img: home, title: "Full Home Renovation", text: "Demolition, framing, mechanical coordination, and finish work managed end to end." },
   { img: exterior, title: "Structural & Exterior", text: "Framing changes, additions, decks, and exterior upgrades to code and built to last." },
-  { img: smart, title: "Smart Solutions", text: "Value engineering, trade coordination, and efficient sequencing for better results." },
+  { img: smart, title: "Project Coordination", text: "Planning, trade coordination, value engineering, and sequencing shaped by real field experience across construction environments." },
 ];
 
 const testimonials = [
-  { name: "Dawn J. Fox", role: "Real Estate Developer", quote: "Exceptional quality, timely delivery, and professional execution throughout the project." },
-  { name: "Jessica Black", role: "Architect", quote: "Their sustainable approach and attention to detail truly elevate every project." },
-  { name: "Stephan Paul", role: "Business Owner", quote: "Reliable team, transparent process, and outstanding construction results." },
+  { name: "Dawn J. Fox", role: "Property Owner", quote: "The work was handled with discipline, clean communication, and a strong understanding of construction quality." },
+  { name: "Jessica Black", role: "Design Professional", quote: "Rite Tech understands how to turn design intent into buildable, well-finished results." },
+  { name: "Stephan Paul", role: "Business Owner", quote: "Reliable coordination, professional site management, and a result that matched the commitment." },
 ];
 
 function Index() {
@@ -93,14 +93,14 @@ function Index() {
           playsInline
           preload="auto"
           src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
-          aria-label="Indra Properties premium video"
+          aria-label="Rite tech premium video"
           onError={(event) => console.error('Desktop hero video failed to load', event)}
         >
           <source
             src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
             type="video/mp4"
           />
-          Indra Properties premium open plots video background
+          Rite tech premium open plots video background
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)]" />
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
@@ -111,7 +111,7 @@ function Index() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-primary font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4"
           >
-            Premium Construction sites  & Land Investments
+            Professional Construction Portfolio
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -119,9 +119,9 @@ function Index() {
             transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
             className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6"
           >
-            Trust and quality You  
+            Built with Experience,
             <br />
-            <span className="text-gold-gradient">Can built on..</span>
+            <span className="text-gold-gradient">Delivered with Standards.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -129,7 +129,7 @@ function Index() {
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
             className="text-gold-gradient text-white font-body max-w-xl mx-auto mb-10 text-base md:text-lg drop-shadow-[0_12px_16px_rgba(0,0,0,0.6)]"
           >
-            Invest with RITE-TECH prime locations with  guaranteed returns..
+            Long-standing construction experience across the Oman industry and American-standard project execution for residential, commercial, renovation, and finishing works.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -142,14 +142,14 @@ function Index() {
               download
               className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 bg-[image:var(--gradient-accent)] text-primary-foreground font-semibold shadow-[0_24px_52px_rgba(255,184,0,0.16)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_58px_rgba(255,184,0,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              Download Brochure
+              View Portfolio
               <ArrowRight className="size-4 text-primary-foreground" />
             </a>
             <Link
               to="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 border border-white/20 bg-white/10 text-white font-semibold shadow-[0_20px_45px_rgba(0,0,0,0.18)] transition duration-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
-              Book Free Site Visit
+              Discuss Your Project
               <ArrowRight className="size-4" />
             </Link>
           </motion.div>
@@ -175,7 +175,7 @@ function Index() {
                 viewport={{ once: true }}
                 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6"
               >
-                Trusted constructions
+                Professional Construction Built on Field Experience
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -184,9 +184,7 @@ function Index() {
                 transition={{ delay: 0.2 }}
                 className="text-muted-foreground font-body leading-relaxed mb-4"
               >
-                With over 15 years of trust and excellence, Indra Properties is one of the leading
-                real estate developers specializing in premium open plots across Andra Pradesh's
-                fastest-growing corridors.
+                Rite Tech Construction is a professional builder portfolio shaped by years of practical site experience, disciplined project coordination, and a strong understanding of construction quality.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0 }}
@@ -195,18 +193,16 @@ function Index() {
                 transition={{ delay: 0.3 }}
                 className="text-muted-foreground font-body leading-relaxed"
               >
-                Whether you're looking for a dream home site or a smart investment, our team ensures
-                you get the best plot options with 100% legal clearance and world-class infrastructure.
+                Our work reflects long-term exposure to the Oman construction industry and American construction expectations, bringing together durable execution, clear communication, and dependable finishing standards.
               </motion.p>
             </div>
-            <div className="grid grid-cols-2 gap-5">
-              {stats.map((stat, index) => (
+             <div className="grid grid-cols-2 gap-5">
+              {stats.map((stat) => (
                 <StatCounter
                   key={stat.label}
                   value={stat.value}
                   label={stat.label}
                   icon={stat.icon}
-                  delay={index * 0.14}
                 />
               ))}
             </div>
@@ -218,7 +214,7 @@ function Index() {
       <section className="container mx-auto px-6 py-20">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-3">Why Choose Us</p>
-          <h2 className="text-4xl md:text-5xl font-bold">Licensed, Bonded, and Insured</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Professional Standards from Start to Handover</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
@@ -245,18 +241,18 @@ function Index() {
           </div>
           <div>
             <p className="text-primary font-semibold uppercase tracking-widest text-xs mb-3">Rite Tech</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-5">Transforming Space, Building Futures</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-5">Construction Experience You Can Trust</h2>
             <p className="text-muted-foreground text-lg mb-8">
               We deliver innovative construction solutions with quality craftsmanship and sustainable design — projects built to last.
             </p>
             <div className="grid grid-cols-2 gap-6 mb-8">
               <div>
                 <div className="text-4xl font-bold text-primary">150+</div>
-                <div className="text-sm text-muted-foreground mt-1">Construction Experts</div>
+                <div className="text-sm text-muted-foreground mt-1">Skilled Trade Network</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-primary">250+</div>
-                <div className="text-sm text-muted-foreground mt-1">Completed Projects</div>
+                <div className="text-sm text-muted-foreground mt-1">Portfolio Works</div>
               </div>
             </div>
             <Link to="/about" className="inline-flex items-center gap-2 px-7 py-3.5 bg-navy text-navy-foreground font-medium rounded-sm hover:bg-primary transition">
@@ -274,7 +270,7 @@ function Index() {
             <h2 className="text-4xl md:text-5xl font-bold max-w-xl">Project Showcase</h2>
           </div>
           <p className="text-muted-foreground max-w-md">
-            Explore our most innovative architectural and construction achievements.
+            A selected look at construction, renovation, finishing, and improvement works completed with practical skill and attention to detail.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -303,13 +299,13 @@ function Index() {
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="relative container mx-auto px-6 max-w-3xl">
           <Leaf className="size-12 text-primary mb-6" />
-          <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-3">Rite Tech</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-5">Environmentally Responsible Building Practices</h2>
+          <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-3">Built Responsibly</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-5">Practical, Durable, and Responsible Construction</h2>
           <p className="opacity-80 text-lg mb-8">
             Our commitment to sustainable design integrates eco-friendly materials, energy efficiency, and innovative green technologies into every project.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/contact" className="px-6 py-3 bg-[image:var(--gradient-accent)] rounded-sm font-medium hover:opacity-90 transition">Sustainability Report</Link>
+            <Link to="/contact" className="px-6 py-3 bg-[image:var(--gradient-accent)] rounded-sm font-medium hover:opacity-90 transition">Start a Project</Link>
             <Link to="/about" className="px-6 py-3 border border-white/30 hover:bg-white/10 rounded-sm font-medium transition">Learn More</Link>
           </div>
         </div>
@@ -320,7 +316,7 @@ function Index() {
         <div className="text-center max-w-2xl mx-auto mb-14">
           <p className="text-primary uppercase tracking-widest text-xs font-semibold mb-3">Testimonials</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">What Our Clients Say</h2>
-          <p className="text-muted-foreground">Hear from businesses and individuals who have experienced our exceptional service.</p>
+          <p className="text-muted-foreground">Client feedback reflects the values behind our portfolio: professionalism, reliability, and construction quality.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t) => (
@@ -353,7 +349,7 @@ function Index() {
               <div key={step} className="bg-card p-6 rounded-sm border border-border">
                 <div className="text-5xl font-display font-bold text-primary/30 mb-3">0{i + 1}</div>
                 <h3 className="font-bold mb-2 flex items-center gap-2"><CheckCircle2 className="size-4 text-primary" /> {step}</h3>
-                <p className="text-sm text-muted-foreground">A clear, transparent step in our delivery process.</p>
+                <p className="text-sm text-muted-foreground">A defined stage managed with clear communication, documentation, and accountability.</p>
               </div>
             ))}
           </div>

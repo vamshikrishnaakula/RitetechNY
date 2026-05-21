@@ -11,7 +11,7 @@ export function Footer() {
             <img src={logo} alt="Rite Tech Construction" className="h-16 w-auto" />
           </div>
           <p className="text-sm opacity-80 max-w-md">
-            Rite Tech Construction — New York. Trust, quality, and craftsmanship you can build on.
+            Rite Tech Construction is a professional builder portfolio shaped by Oman construction industry experience, American-standard execution, and dependable workmanship.
           </p>
           <div className="flex gap-3 mt-6">
             {[Facebook, Instagram, Linkedin].map((Icon, i) => (
