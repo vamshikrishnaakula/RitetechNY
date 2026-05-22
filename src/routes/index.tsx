@@ -58,6 +58,13 @@ const testimonials = [
   { name: "Stephan Paul", role: "Business Owner", quote: "Reliable coordination, professional site management, and a result that matched the commitment." },
 ];
 
+const heroVideoSources = {
+  mobile:
+    "https://res.cloudinary.com/dakwcewks/video/upload/f_mp4,q_auto:good,vc_auto,w_720,h_1280,c_fill/v1779155408/video_texas_ritetech_cgbdma.mp4",
+  desktop:
+    "https://res.cloudinary.com/dakwcewks/video/upload/f_mp4,q_auto:good,vc_auto,w_1920,h_1080,c_fill/v1779155408/video_texas_ritetech_cgbdma.mp4",
+};
+
 function Index() {
   const heroVideoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -98,7 +105,12 @@ function Index() {
           onError={(event) => console.error("Hero video failed to load", event)}
         >
           <source
-            src="https://res.cloudinary.com/dakwcewks/video/upload/v1779155408/video_texas_ritetech_cgbdma.mp4"
+            src={heroVideoSources.mobile}
+            media="(max-width: 767px)"
+            type="video/mp4"
+          />
+          <source
+            src={heroVideoSources.desktop}
             type="video/mp4"
           />
           Your browser does not support the video tag.
