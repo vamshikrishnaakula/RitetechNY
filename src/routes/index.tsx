@@ -57,13 +57,6 @@ const testimonials = [
   { name: "Stephan Paul", role: "Business Owner", quote: "Reliable coordination, professional site management, and a result that matched the commitment." },
 ];
 
-const heroVideoSources = {
-  mobile:
-    "https://res.cloudinary.com/dakwcewks/video/upload/f_mp4,q_auto:good,vc_auto,w_720,h_1280,c_fill/video_texas_ritetech_cgbdma.mp4",
-  desktop:
-    "https://res.cloudinary.com/dakwcewks/video/upload/f_mp4,q_auto:good,vc_auto,w_1920,h_1080,c_fill/video_texas_ritetech_cgbdma.mp4",
-};
-
 function Index() {
   return (
     <SiteLayout>
@@ -72,44 +65,14 @@ function Index() {
       {/* Hero */}
             <section className="relative h-screen flex items-center justify-center overflow-hidden">
 
-        <video
-          className="absolute inset-0 h-full w-full object-cover md:hidden"
-          width={720}
-          height={1280}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster={hero}
-          aria-label="Rite Tech mobile hero video"
-          onError={(event) => console.error("Mobile hero video failed to load", event)}
-        >
-          <source
-            src={heroVideoSources.mobile}
-            type="video/mp4"
-          />
-          Your browser does not support the mobile hero video.
-        </video>
-        <video
-          className="absolute inset-0 hidden h-full w-full object-cover md:block"
-          width={1920}
-          height={1080}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster={hero}
-          aria-label="Rite Tech desktop hero video"
-          onError={(event) => console.error("Desktop hero video failed to load", event)}
-        >
-          <source
-            src={heroVideoSources.desktop}
-            type="video/mp4"
-          />
-          Your browser does not support the desktop hero video.
-        </video>
+        <iframe
+          className="absolute inset-0 h-full w-full object-cover"
+          src="https://player.cloudinary.com/embed/?cloud_name=dakwcewks&public_id=video_texas_ritetech_cgbdma&autoplay=true&muted=true"
+          title="Rite Tech hero video"
+          allow="autoplay; fullscreen"
+          loading="lazy"
+          frameBorder="0"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)]" />
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
         <div className="relative z-10 container mx-auto px-4 text-center">
