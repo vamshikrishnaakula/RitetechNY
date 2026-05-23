@@ -4,6 +4,7 @@ import { CtaBanner } from "@/components/CtaBanner";
 import StatCounter from "@/components/ui/StatCounter";
 import { ArrowRight, HardHat, Hammer, Headphones, Leaf, CheckCircle2, Quote } from "lucide-react";
 import hero from "@/assets/hero.jpg";
+import heroVideo from "@/assets/video_texas_ritetech.mp4";
 import {
 Shield, Users, Award, Building, Search, MapPin, Home,
   Handshake, FileCheck, Eye, TrendingUp, ChevronRight, Star, HelpCircle,
@@ -75,23 +76,7 @@ function Index() {
           muted
         /> */}
         <video
-          className="absolute inset-0 h-full w-full object-cover md:hidden"
-          width={720}
-          height={1280}
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-        >
-          <source
-            src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1779545783/video_texas_ritetech_qs7ov7.mp4"
-            type="video/mp4"
-          />
-          Rite Tech premium video background
-        </video>
-        <video
-          className="absolute inset-0 hidden h-full w-full object-cover md:block"
+          className="absolute inset-0 h-full w-full object-cover"
           width={1920}
           height={1080}
           autoPlay
@@ -99,12 +84,10 @@ function Index() {
           muted
           playsInline
           preload="auto"
+          src={heroVideo}
+          poster={hero}
         >
-          <source
-            src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1779545783/video_texas_ritetech_qs7ov7.mp4"
-            type="video/mp4"
-          />
-          Rite Tech premium video background
+          Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black/10" />
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
