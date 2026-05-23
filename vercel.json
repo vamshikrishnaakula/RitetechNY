@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "builds": [
+    { "src": "api/index.js", "use": "@vercel/edge" },
+    { "src": "dist/client/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/favicon.svg", "dest": "/dist/client/favicon.svg" },
+    { "src": "/robots.txt", "dest": "/dist/client/robots.txt" },
+    { "src": "/assets/(.*)", "dest": "/dist/client/assets/$1" },
+    { "src": "/(.*)", "dest": "/api/index.js" }
+  ]
+}
