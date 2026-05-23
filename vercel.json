@@ -5,11 +5,11 @@
     { "src": "api/index.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/favicon/.svg", "dest": "/dist/client/favicon.svg" },
-    { "src": "/favicon/.ico", "dest": "/dist/client/favicon.svg" },
-    { "src": "/favicon/.png", "dest": "/dist/client/favicon.svg" },
-    { "src": "/robots/.txt", "dest": "/dist/client/robots.txt" },
-    { "src": "/assets/(.*)", "dest": "/dist/client/assets/$1" },
-    { "src": "/(.*)", "dest": "/api/index.js" }
+    { "src": "^/favicon\\.svg$", "dest": "/dist/client/favicon.svg" },
+    { "src": "^/favicon\\.ico$", "dest": "/dist/client/favicon.svg" },
+    { "src": "^/favicon\\.png$", "dest": "/dist/client/favicon.svg" },
+    { "src": "^/robots\\.txt$", "dest": "/dist/client/robots.txt" },
+    { "src": "^/assets/(.*)$", "dest": "/dist/client/assets/$1" },
+    { "src": "^/(.*)$", "dest": "/api/index.js" }
   ]
 }
