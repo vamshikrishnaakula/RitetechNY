@@ -63,69 +63,7 @@ function Index() {
       {/* Top notice bar */}
 
       {/* Hero */}
-            <section className="relative h-screen flex items-center justify-center overflow-hidden">
-
-        <iframe
-          className="absolute inset-0 h-full w-full object-cover"
-          src="https://player.cloudinary.com/embed/?cloud_name=dakwcewks&public_id=video_texas_ritetech_cgbdma&autoplay=true&muted=true"
-          title="Rite Tech hero video"
-          allow="autoplay; fullscreen"
-          loading="lazy"
-          frameBorder="0"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/40 pointer-events-none shadow-[inset_0_0_120px_rgba(0,0,0,0.6)]" />
-        {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-primary font-body text-sm md:text-base tracking-[0.3em] uppercase mb-4"
-          >
-            Professional Construction Portfolio
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
-            className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6"
-          >
-            Built with Experience,
-            <br />
-            <span className="text-gold-gradient">Delivered with Standards.</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            className="text-gold-gradient text-white font-body max-w-xl mx-auto mb-10 text-base md:text-lg drop-shadow-[0_12px_16px_rgba(0,0,0,0.6)]"
-          >
-            Long-standing construction experience across the Oman industry and American-standard project execution for residential, commercial, renovation, and finishing works.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="flex flex-col sm:flex-row items-center gap-4 justify-center"
-          >
-            <a
-              href=""
-              download
-              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 bg-[image:var(--gradient-accent)] text-primary-foreground font-semibold shadow-[0_24px_52px_rgba(255,184,0,0.16)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_28px_58px_rgba(255,184,0,0.22)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            >
-              View Portfolio
-              <ArrowRight className="size-4 text-primary-foreground" />
-            </a>
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 border border-white/20 bg-white/10 text-white font-semibold shadow-[0_20px_45px_rgba(0,0,0,0.18)] transition duration-300 hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
-              Discuss Your Project
-              <ArrowRight className="size-4" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+          
 
         {/* About Intro */}
       <section className="py-20 bg-navy-gradient">
