@@ -1,17 +1,17 @@
 {
-  "version": 3,
+  "version": 2,
   "functions": {
-    "api/index.edge.js": {
+    "api/index.js": {
       "runtime": "edge",
       "maxDuration": 10
     }
   },
   "builds": [
     { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist/client" } },
-    { "src": "api/index.edge.js", "use": "@vercel/edge" }
+    { "src": "api/index.js", "use": "@vercel/edge" }
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "^/(.*)$", "dest": "/api/index.edge.js" }
+    { "src": "^/(.*)$", "dest": "/api/index.js" }
   ]
 }
