@@ -2,39 +2,48 @@ import server from "../dist/server/server.js";
 
 const app = server.default ?? server;
 
-function normalizeRequest(request) {
+export default async function handler(request) {
   const requestUrl = typeof request.url === "string" ? request.url : "/";
-  const host = request.headers.get("host") || request.headers.get("x-forwarded-host");
-  const protocol = request.headers.get("x-forwarded-proto") || "https";
+  const host =
+    request.headers.get("host") ||
+    request.headers.get("x-forwarded-host");
+  const protocol =
+    request.headers.get("x-forwarded-proto") || "https";
 
+  // Build a fully-qualified URL (Edge runtime requires it)
   const normalizedUrl = requestUrl.startsWith("http")
     ? requestUrl
-    : new URL(requestUrl, `${protocol}://${host ?? "example.com"}`).toString();
+    : new URL(requestUrl, `${protocol}://${host ?? "localhost"}`).toString();
 
-  if (!host && !requestUrl.startsWith("http")) {
-    console.warn("Vercel edge handler missing host header; using fallback URL.", {
-      requestUrl,
-      normalizedUrl,
-      headers: Object.fromEntries(request.headers.entries()),
-    });
-  }
+  console.log("[edge] incoming", {
+    method: request.method,
+    url: normalizedUrl,
+    host,
+    protocol,
+  });
 
-  return new Request(normalizedUrl, {
+  // GET/HEAD must NOT have a body — passing one causes the fetch to hang
+  const hasBody = request.method !== "GET" && request.method !== "HEAD";
+
+  const normalizedRequest = new Request(normalizedUrl, {
     method: request.method,
     headers: request.headers,
-    body: request.body,
-    redirect: request.redirect,
+    body: hasBody ? request.body : undefined,
+    // duplex is required when streaming a body in the Edge runtime
+    ...(hasBody ? { duplex: "half" } : {}),
+    redirect: "manual",
     signal: request.signal,
   });
+
+  try {
+    const response = await app.fetch(normalizedRequest);
+    return response;
+  } catch (err) {
+    console.error("[edge] unhandled error", err);
+    return new Response("Internal Server Error", { status: 500 });
+  }
 }
 
-export default async function handler(request) {
-  console.log("Vercel edge request", {
-    method: request.method,
-    url: request.url,
-    host: request.headers.get("host"),
-    forwardedHost: request.headers.get("x-forwarded-host"),
-    protocol: request.headers.get("x-forwarded-proto"),
-  });
-  return await app.fetch(normalizeRequest(request));
-}
+export const config = {
+  runtime: "edge",
+};
