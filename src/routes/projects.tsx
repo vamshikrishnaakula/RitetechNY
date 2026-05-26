@@ -61,8 +61,6 @@ function ProjectsPage() {
             <figure key={p.title} className="group relative overflow-hidden rounded-sm aspect-[4/5] cursor-pointer">
               <img src={p.img} alt={p.title} loading="lazy" width={1280} height={960} className="size-full object-cover group-hover:scale-105 transition duration-700" />
               <figcaption className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent p-3 sm:p-6 flex flex-col justify-end text-navy-foreground">
-                <span className="text-xs uppercase tracking-widest text-primary mb-1">{p.tag}</span>
-                <span className="text-lg sm:text-xl font-bold line-clamp-2">{p.title}</span>
               </figcaption>
             </figure>
           ))}
