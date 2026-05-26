@@ -1,5 +1,9 @@
 import server from "../dist/server/server.js";
 
+export const config = {
+  runtime: "edge",
+};
+
 const app = server.default ?? server;
 
 export default async function handler(request) {
@@ -43,7 +47,3 @@ export default async function handler(request) {
     return new Response("Internal Server Error", { status: 500 });
   }
 }
-
-export const config = {
-  runtime: "edge",
-};
