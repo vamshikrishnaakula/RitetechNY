@@ -94,7 +94,40 @@ function Index() {
           loop
           muted
         /> */}
+        {/* // */}
         <video
+          className="absolute inset-0 h-full w-full object-cover md:hidden"
+          width={720}
+          height={1280}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          <source
+            src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1776999988/Mobile_Alignment_Video_1_ew0pwd.mp4"
+            type="video/mp4"
+          />
+          <Rite></Rite> premium open plots mobile video background
+        </video>
+        <video
+          className="absolute inset-0 hidden h-full w-full object-cover md:block"
+          width={1920}
+          height={1080}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          <source
+            src="https://res.cloudinary.com/dakwcewks/video/upload/Website_Banner_Video_wli0m7.mp4"
+            type="video/mp4"
+          />
+          Rite premium open plots video background
+        </video>
+        {/* <video
           ref={videoRef}
           id="hero-video"
           className="absolute inset-0 h-full w-full object-cover"
@@ -109,7 +142,7 @@ function Index() {
           poster={hero}
         >
           Your browser does not support the video tag.
-        </video>
+        </video> */}
         <div className="absolute inset-0 bg-black/10" />
         {/* <div className="absolute left-4 top-4 z-20 rounded-full bg-black/30 px-4 py-3 text-left shadow-lg shadow-black/20 backdrop-blur-sm sm:left-6 sm:top-6"></div> */}
         <div className="relative z-10 container mx-auto px-4 text-center">
