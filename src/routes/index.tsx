@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import React, { useEffect, useRef } from "react";
 import { CtaBanner } from "@/components/CtaBanner";
 import StatCounter from "@/components/ui/StatCounter";
 import { ArrowRight, HardHat, Hammer, Headphones, Leaf, CheckCircle2, Quote } from "lucide-react";
@@ -59,6 +60,24 @@ const testimonials = [
 ];
 
 function Index() {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    try {
+      // Ensure iOS/older WebKit use the inline play flags
+      v.setAttribute("playsinline", "");
+      v.setAttribute("webkit-playsinline", "");
+      v.muted = true;
+      // Try to start playback; some mobile browsers allow autoplay when muted
+      v.play().catch(() => {
+        // ignore playback errors — user gesture may be required
+      });
+    } catch (e) {
+      // silent
+    }
+  }, []);
   return (
     <SiteLayout>
       {/* Top notice bar */}
@@ -76,6 +95,8 @@ function Index() {
           muted
         /> */}
         <video
+          ref={videoRef}
+          id="hero-video"
           className="absolute inset-0 h-full w-full object-cover"
           width={1920}
           height={1080}
