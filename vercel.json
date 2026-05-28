@@ -1,12 +1,16 @@
 {
-  "version": 3,
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist/client",
-  "functions": {
-    "api/index.edge.js": {
-      "runtime": "edge"
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/client" }
+    },
+    {
+      "src": "api/index.edge.js",
+      "use": "@vercel/edge"
     }
-  },
+  ],
   "routes": [
     {
       "handle": "filesystem"
