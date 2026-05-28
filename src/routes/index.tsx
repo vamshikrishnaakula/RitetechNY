@@ -5,7 +5,6 @@ import { CtaBanner } from "@/components/CtaBanner";
 import StatCounter from "@/components/ui/StatCounter";
 import { ArrowRight, HardHat, Hammer, Headphones, Leaf, CheckCircle2, Quote } from "lucide-react";
 import hero from "@/assets/hero.jpg";
-import heroVideo from "@/assets/video_texas_ritetech.mp4";
 import {
 Shield, Users, Award, Building, Search, MapPin, Home,
   Handshake, FileCheck, Eye, TrendingUp, ChevronRight, Star, HelpCircle,
@@ -106,10 +105,10 @@ function Index() {
           preload="auto"
         >
           <source
-            src="https://res.cloudinary.com/dwfnlobmq/video/upload/v1776999988/Mobile_Alignment_Video_1_ew0pwd.mp4"
+            src="https://res.cloudinary.com/dxjjpjv8g/video/upload/v1779544206/video_texas_ritetech_qnpy0r.mp4"
             type="video/mp4"
           />
-          <Rite></Rite> premium open plots mobile video background
+          Rite premium open plots mobile video background
         </video>
         <video
           className="absolute inset-0 hidden h-full w-full object-cover md:block"
@@ -122,7 +121,7 @@ function Index() {
           preload="auto"
         >
           <source
-            src="https://res.cloudinary.com/dakwcewks/video/upload/Website_Banner_Video_wli0m7.mp4"
+            src="https://res.cloudinary.com/dxjjpjv8g/video/upload/v1779544206/video_texas_ritetech_qnpy0r.mp4"
             type="video/mp4"
           />
           Rite premium open plots video background
