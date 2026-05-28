@@ -103,6 +103,7 @@ function Index() {
           muted
           playsInline
           preload="auto"
+          poster={hero}
         >
           <source
             src="https://res.cloudinary.com/dxjjpjv8g/video/upload/v1779544206/video_texas_ritetech_qnpy0r.mp4"
@@ -119,6 +120,7 @@ function Index() {
           muted
           playsInline
           preload="auto"
+          poster={hero}
         >
           <source
             src="https://res.cloudinary.com/dxjjpjv8g/video/upload/v1779544206/video_texas_ritetech_qnpy0r.mp4"
