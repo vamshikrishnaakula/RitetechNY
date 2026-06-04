@@ -56,7 +56,7 @@ function ProjectsPage() {
       </section>
 
       <section className="container mx-auto px-4 sm:px-6 py-12 md:py-20">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {items.map((p) => (
             <figure key={p.title} className="group relative overflow-hidden rounded-sm aspect-[4/5] cursor-pointer">
               <img src={p.img} alt={p.title} loading="lazy" width={1280} height={960} className="size-full object-cover group-hover:scale-105 transition duration-700" />
@@ -64,7 +64,7 @@ function ProjectsPage() {
               </figcaption>
             </figure>
           ))}
-        </div>
+        </div> */}
       </section>
 
       <CtaBanner />
