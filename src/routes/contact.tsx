@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -23,6 +23,29 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = formData.get("name")?.toString().trim() || "";
+    const email = formData.get("email")?.toString().trim() || "";
+    const phone = formData.get("phone")?.toString().trim() || "";
+    const projectType = formData.get("projectType")?.toString().trim() || "";
+    const message = formData.get("message")?.toString().trim() || "";
+
+    const text = encodeURIComponent(
+      `Contact form submitted:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject type: ${projectType}\nDetails: ${message}`
+    );
+
+    ["15164219003", "12126710950"].forEach((number) => {
+      window.open(`https://wa.me/${number}?text=${text}`, "_blank", "noopener,noreferrer");
+    });
+
+    setSent(true);
+  };
+
   return (
     <SiteLayout>
       <section className="bg-navy text-navy-foreground py-24">
@@ -64,18 +87,18 @@ function ContactPage() {
         </div>
 
         <form
-          onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+          onSubmit={handleSubmit}
           className="md:col-span-3 bg-card border border-border rounded-sm p-8 space-y-5"
         >
           <h2 className="text-2xl font-bold">Send your project details</h2>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Field label="Full name"><input required className="input" placeholder="Jane Doe" /></Field>
-            <Field label="Email"><input required type="email" className="input" placeholder="jane@email.com" /></Field>
+            <Field label="Full name"><input required name="name" className="input" placeholder="Jane Doe" /></Field>
+            <Field label="Email"><input required name="email" type="email" className="input" placeholder="jane@email.com" /></Field>
           </div>
           <div className="grid sm:grid-cols-2 gap-4">
-            <Field label="Phone"><input className="input" placeholder="(555) 555-5555" /></Field>
+            <Field label="Phone"><input name="phone" className="input" placeholder="(555) 555-5555" /></Field>
             <Field label="Project type">
-              <select className="input">
+              <select name="projectType" className="input">
                 <option>Construction Work</option>
                 <option>Renovation / Remodeling</option>
                 <option>Kitchen or Bathroom Upgrade</option>
@@ -86,7 +109,7 @@ function ContactPage() {
             </Field>
           </div>
           <Field label="Tell us about your project">
-            <textarea required rows={5} className="input resize-none" placeholder="Scope, location, timeline, budget range, and any site details..." />
+            <textarea required name="message" rows={5} className="input resize-none" placeholder="Scope, location, timeline, budget range, and any site details..." />
           </Field>
           <button type="submit" className="w-full sm:w-auto px-7 py-3.5 bg-[image:var(--gradient-accent)] text-primary-foreground font-medium rounded-sm hover:opacity-90 transition">
             {sent ? "Thanks - we'll be in touch!" : "Request Consultation"}
