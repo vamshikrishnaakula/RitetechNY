@@ -43,7 +43,7 @@ const directors = [
   },
   {
     name: "Mr. Zakir Khan",
-    title: "Co-Managing Director",
+    title: "Managing Director",
     quote:
       "We are committed to dependable construction and clean finishing. From planning to final walkthrough, we keep the work organized, practical, professional, and reliable.",
   },
