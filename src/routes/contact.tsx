@@ -69,7 +69,7 @@ function ContactPage() {
         <div className="md:col-span-2 space-y-6">
           {[
             { icon: Phone, label: "Phone", value: ["+1 212-671-0950", "+1 516-421-9003"] },
-            { icon: Mail, label: "Email", value: "info@ritetechnyc.com" },
+            { icon: Mail, label: "Email", value: "ritetechny@gmail.com" },
             { icon: MapPin, label: "Service Area", value: "New York City" },
             { icon: Clock, label: "Hours", value: "Mon–Sat · 8am–6pm" },
           ].map((c) => (
