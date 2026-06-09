@@ -22,7 +22,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Rite Tech Construction — Home Remodeling & Construction" },
-      { name: "description", content: "Professional construction portfolio backed by long-term experience in the Oman construction industry and American-standard project delivery." },
+      { name: "description", content: "Professional construction portfolio backed by long-term experience in the  industry and American-standard project delivery." },
       { property: "og:title", content: "Rite Tech Construction — Home Remodeling & Construction" },
       { property: "og:description", content: "Construction, renovation, remodeling, structural work, finishing, and project coordination delivered with professional standards and proven field experience." },
       { property: "og:url", content: "" },
@@ -171,7 +171,7 @@ function Index() {
             transition={{ delay: 0.5 }}
             className="text-white font-body max-w-xl mx-auto mb-10 text-base md:text-lg"
           >
-            Long-standing construction experience across the Oman industry and American-standard project execution for residential, commercial, renovation, and finishing works.
+            Long-standing construction experience  and American-standard project execution for residential, commercial, renovation, and finishing works.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -235,7 +235,7 @@ function Index() {
                 transition={{ delay: 0.3 }}
                 className="text-muted-foreground font-body leading-relaxed"
               >
-                Our work reflects long-term exposure to the Oman construction industry and American construction expectations, bringing together durable execution, clear communication, and dependable finishing standards.
+                Our work reflects long-term exposure to the  American construction expectations, bringing together durable execution, clear communication, and dependable finishing standards.
               </motion.p>
             </div>
              <div className="grid grid-cols-2 gap-5">

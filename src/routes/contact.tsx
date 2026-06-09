@@ -38,8 +38,8 @@ function ContactPage() {
       <section className="container mx-auto px-6 py-20 grid md:grid-cols-5 gap-10">
         <div className="md:col-span-2 space-y-6">
           {[
-            { icon: Phone, label: "Phone", value: "+1-212-671-0950" },
-            { icon: Mail, label: "Email", value: "info@ritetechconstruction.com" },
+            { icon: Phone, label: "Phone", value: ["+1 212-671-0950", "+1 516-421-9003"] },
+            { icon: Mail, label: "Email", value: "info@ritetechnyc.com" },
             { icon: MapPin, label: "Service Area", value: "New York City" },
             { icon: Clock, label: "Hours", value: "Mon–Sat · 8am–6pm" },
           ].map((c) => (
@@ -49,7 +49,15 @@ function ContactPage() {
               </div>
               <div>
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">{c.label}</div>
-                <div className="font-semibold mt-0.5">{c.value}</div>
+                {Array.isArray(c.value) ? (
+                  <div className="font-semibold mt-0.5 space-y-1">
+                    {c.value.map((phone) => (
+                      <div key={phone}>{phone}</div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="font-semibold mt-0.5">{c.value}</div>
+                )}
               </div>
             </div>
           ))}

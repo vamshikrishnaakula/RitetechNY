@@ -11,12 +11,12 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About — Rite Tech Construction" },
-      { name: "description", content: "Professional builder portfolio with long-term Oman construction industry experience and American-standard project execution." },
+      { name: "description", content: "Professional builder portfolio with long-term American industry experience and American-standard project execution." },
       { property: "og:title", content: "About Rite Tech" },
       { property: "og:description", content: "Experienced construction leadership, professional workmanship, and disciplined project delivery." },
       { property: "og:url", content: "/about" },
       { name: "twitter:title", content: "About Rite Tech Construction" },
-      { name: "twitter:description", content: "Professional builder portfolio with long-term Oman construction industry experience and American-standard project execution." },
+      { name: "twitter:description", content: "Professional builder portfolio with long-term American construction industry experience and American-standard project execution." },
     ],
     links: [
       { rel: "canonical", href: "/about" },
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/about")({
 
 const whyChoose = [
   "15+ years of practical construction and site delivery experience",
-  "Strong exposure to Oman construction industry practices",
+  "Strong exposure to American construction industry practices",
   "American-standard quality expectations and client communication",
   "Residential, commercial, renovation, and finishing capability",
   "Transparent scope, scheduling, documentation, and handover",
@@ -36,13 +36,13 @@ const whyChoose = [
 
 const directors = [
   {
-    name: "Mr. Jawad Khan",
+    name: "Mr. Jawad Chaudhary",
     title: "Managing Director",
     quote:
       "My focus is simple: deliver every project, discipline, and clear communication. Clients should understand the scope, schedule, quality expectations, and progress at every stage.",
   },
   {
-    name: "Mr. Zakeer Khan",
+    name: "Mr. Zakir Khan",
     title: "Co-Managing Director",
     quote:
       "We are committed to dependable construction and clean finishing. From planning to final walkthrough, we keep the work organized, practical, professional, and reliable.",
@@ -60,7 +60,7 @@ function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
-            Professional building experience shaped by Oman and American construction standards.
+            Professional building experience shaped by  American construction standards.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
@@ -77,7 +77,7 @@ function AboutPage() {
         <div>
           <h2 className="text-4xl font-bold mb-5">Our story</h2>
           <p className="text-muted-foreground mb-6 leading-relaxed">
-            Rite Tech was created to present construction work with the seriousness it deserves: clear planning, professional coordination, durable methods, and reliable delivery. The portfolio reflects hands-on experience developed through the Oman construction industry and strengthened by American project standards.
+            Rite Tech was created to present construction work with the seriousness it deserves: clear planning, professional coordination, durable methods, and reliable delivery. The portfolio reflects hands-on experience developed through the  industry and strengthened by American project standards.
           </p>
           <p className="text-muted-foreground mb-6 leading-relaxed">
             We support construction-related works including residential improvements, commercial upgrades, remodeling, structural coordination, masonry, flooring, tile, exterior works, and interior finishing. Our strength is practical execution and the ability to keep projects organized from first discussion to final handover.
@@ -145,7 +145,7 @@ function AboutPage() {
               >
                 <div className="aspect-[4/3] w-full overflow-hidden rounded-sm mb-4 flex items-center justify-left">
                   <img
-                    src={index === 0 ? Jawaad : Jakeer}
+                    src={index === 0 ? Jawaad : Jawaad}
                     alt={director.name}
                     loading="lazy"
                     width={800}

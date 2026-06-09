@@ -99,7 +99,7 @@ export function Header() {
       <div className="bg-navy text-navy-foreground text-sm container mx-auto px-4">
             <div className="container mx-auto px-6 py-2 flex items-center justify-between gap-3">
               <a href="tel:+12126710950" className="flex items-center gap-2 hover:text-primary transition">
-                <Phone className="size-3.5" /> +1-212-671-0950
+                
               </a>
               <div className="flex items-center gap-3">
                 <span className="hidden sm:inline text-navy-foreground/70">Licensed · Bonded · Insured</span>

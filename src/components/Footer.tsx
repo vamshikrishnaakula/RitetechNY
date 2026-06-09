@@ -11,7 +11,7 @@ export function Footer() {
             <img src={logo} alt="Rite Tech Construction" className="h-16 w-auto" />
           </div>
           <p className="text-sm opacity-80 max-w-md">
-            Rite Tech Construction is a professional builder portfolio shaped by Oman construction industry experience, American-standard execution, and dependable workmanship.
+            Rite Tech Construction is a professional builder portfolio shaped by American construction industry experience & standard execution, and dependable workmanship.
           </p>
           <div className="flex gap-3 mt-6">
             {[Facebook, Instagram, Linkedin].map((Icon, i) => (
@@ -33,7 +33,8 @@ export function Footer() {
         <div>
           <h4 className="font-display font-semibold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm opacity-80">
-            <li className="flex gap-2"><Phone className="size-4 mt-0.5 text-primary shrink-0" /><span>+1-212-671-0950</span></li>
+            <li className="flex gap-2"><Phone className="size-4 mt-0.5 text-primary shrink-0" /><span>+1 212-671-0950</span></li>
+                        <li className="flex gap-2"><Phone className="size-4 mt-0.5 text-primary shrink-0" /><span>+1 516-421-9003</span></li>
             <li className="flex gap-2"><Mail className="size-4 mt-0.5 text-primary shrink-0" /><span>info@ritetechconstruction.com</span></li>
             <li className="flex gap-2"><MapPin className="size-4 mt-0.5 text-primary shrink-0" /><span>New York, NY</span></li>
           </ul>
