@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -23,6 +23,8 @@ export const Route = createFileRoute("/contact")({
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
+  const whatsappRef1 = useRef<HTMLAnchorElement | null>(null);
+  const whatsappRef2 = useRef<HTMLAnchorElement | null>(null);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -39,8 +41,21 @@ function ContactPage() {
       `Contact form submitted:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject type: ${projectType}\nDetails: ${message}`
     );
 
-    ["15164219003", "12126710950"].forEach((number) => {
-      window.open(`https://wa.me/${number}?text=${text}`, "_blank", "noopener,noreferrer");
+    const urls = [
+      
+      `https://wa.me/12126710950?text=${text}`,
+      `https://wa.me/15164219003?text=${text}`,
+    ];
+
+    const refs = [whatsappRef1.current, whatsappRef2.current];
+
+    refs.forEach((link, index) => {
+      if (link) {
+        link.href = urls[index];
+        link.click();
+      } else {
+        window.open(urls[index], "_blank", "noopener,noreferrer");
+      }
     });
 
     setSent(true);
@@ -116,6 +131,9 @@ function ContactPage() {
           </button>
         </form>
       </section>
+
+      <a ref={whatsappRef1} className="hidden" target="_blank" rel="noopener noreferrer" href="/" />
+      <a ref={whatsappRef2} className="hidden" target="_blank" rel="noopener noreferrer" href="/" />
 
       <style>{`.input{width:100%;padding:.7rem .9rem;border:1px solid var(--color-border);border-radius:.25rem;background:var(--color-background);font-size:.95rem;outline:none;transition:border-color .2s}.input:focus{border-color:var(--color-primary)}`}</style>
     </SiteLayout>
